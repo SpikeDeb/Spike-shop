@@ -29,12 +29,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Supabase JS Client -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .glass-card { background: rgba(15, 7, 40, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(139, 92, 246, 0.2); }
         .glow { box-shadow: 0 0 50px -10px rgba(124, 58, 237, 0.3); }
+        /* Razorpay button styling fix */
+        .razorpay-embed-btn { width: 100% !important; display: block; }
     </style>
 </head>
 <body class="bg-[#0b041a] text-gray-100 min-h-screen selection:bg-purple-500 selection:text-white">
@@ -59,8 +59,8 @@
 
             <!-- Desktop Navigation Links -->
             <div class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-                <a href="#services" class="text-gray-300 hover:text-purple-400 transition">Services</a>
                 <a href="#clipping-packages" class="text-gray-300 hover:text-purple-400 transition">Video Clipping</a>
+                <a href="#services" class="text-gray-300 hover:text-purple-400 transition">Meta Ads</a>
                 <a href="#subscriptions" class="text-gray-300 hover:text-purple-400 transition">VIP Subscriptions</a>
                 <a href="#custom-deal" class="text-gray-300 hover:text-purple-400 transition">Custom Deal</a>
                 <a href="#about" class="text-gray-300 hover:text-purple-400 transition">About Us</a>
@@ -69,7 +69,6 @@
 
             <!-- Action Buttons / Mobile Menu Trigger -->
             <div class="flex items-center space-x-3">
-                <!-- Instagram Button requested by user -->
                 <a href="https://instagram.com/spike.technologies" target="_blank" title="Instagram: @spike.technologies" class="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-pink-500/30 text-pink-300 hover:text-white hover:bg-pink-600/40 transition text-xs font-bold">
                     <i class="fa-brands fa-instagram text-base"></i> @spike.technologies
                 </a>
@@ -84,23 +83,22 @@
                     </button>
                     <button onclick="logoutUser()" title="Logout" class="p-2 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500/20"><i class="fa-solid fa-power-off text-xs"></i></button>
                 </div>
-                <!-- 3-Dot Mobile / Quick Menu Button -->
                 <button onclick="toggleMobileMenu()" class="p-2.5 rounded-xl bg-purple-900/40 border border-purple-500/30 text-purple-300 hover:text-white hover:bg-purple-900/70 transition">
                     <i class="fa-solid fa-ellipsis-vertical text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- 3-Dot Dropdown Menu (Mobile/Quick Options) -->
+        <!-- 3-Dot Dropdown Menu -->
         <div id="dropdown-menu" class="hidden absolute right-4 top-20 w-64 glass-card rounded-2xl shadow-2xl border border-purple-500/40 p-3 space-y-1 z-50">
             <a href="https://instagram.com/spike.technologies" target="_blank" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-pink-300 hover:bg-pink-900/40 transition">
                 <i class="fa-brands fa-instagram w-5"></i> @spike.technologies
             </a>
-            <a href="#services" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
-                <i class="fa-solid fa-layer-group text-purple-400 w-5"></i> Meta Ad Services
-            </a>
             <a href="#clipping-packages" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
                 <i class="fa-solid fa-video text-purple-400 w-5"></i> Video Clipping
+            </a>
+            <a href="#services" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
+                <i class="fa-solid fa-layer-group text-purple-400 w-5"></i> Meta Ad Services
             </a>
             <a href="#subscriptions" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
                 <i class="fa-solid fa-crown text-yellow-400 w-5"></i> VIP Subscriptions
@@ -164,13 +162,13 @@
         </div>
     </header>
 
-    <!-- NEW SECTION: Video Clipping & Repurposing Packages (With 50% Strikethrough & INR/USD) -->
+    <!-- SECTION 1: Video Clipping & Repurposing Packages -->
     <section id="clipping-packages" class="py-20 relative bg-[#090315] border-y border-purple-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Long-to-Short Conversion</h2>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Your Content, Our Viral Engine</h2>
                 <h3 class="text-3xl sm:text-5xl font-extrabold mb-4">Podcast & Video Clipping Services</h3>
-                <p class="text-gray-400 text-base">Turn your long-form streams and podcasts into viral 9:16 Shorts, Reels, and TikToks. Special 50% OFF discount rates below!</p>
+                <p class="text-gray-400 text-base">Turn your long-form streams and podcasts into high-retention viral 9:16 Shorts, Reels, and TikToks. Powered by professional editors with dynamic Hormozi-style captions and emojis. Pay securely via Razorpay or order directly via WhatsApp.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -197,9 +195,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Revision per video</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Starter / Trial Package (Clipping)', '₹999 / $30')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMciIiQqyMt0B1" async> </script></form>
+                        <button onclick="orderService('Starter / Trial Package (Clipping)', '₹999 / $30')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 2. Growth Package (Best Seller) -->
@@ -226,9 +227,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Unlimited Revisions</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Growth Package (Clipping)', '₹2,999 / $90')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold shadow-lg shadow-purple-600/30 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcmUHHg9yWXSl" async> </script></form>
+                        <button onclick="orderService('Growth Package (Clipping)', '₹2,999 / $90')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 3. Pro / Agency Package -->
@@ -254,9 +258,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Full channel growth optimization tips</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Pro / Agency Package (Clipping)', '₹5,999 / $170')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcnnq9RygROZ4" async> </script></form>
+                        <button onclick="orderService('Pro / Agency Package (Clipping)', '₹5,999 / $170')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -285,12 +292,15 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Free Revision per video</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Bulk / Volume Pack (Clipping)', '₹1,200 / $36')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcosGO2ii2Ktp" async> </script></form>
+                        <button onclick="orderService('Bulk / Volume Pack (Clipping)', '₹1,200 / $36')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
-                <!-- 5. Emergency / 12-Hour Express Delivery -->
+                <!-- 5. 12-Hour Express Delivery -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         50% OFF
@@ -312,12 +322,15 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Free Revision</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('12-Hour Express Pack (Clipping)', '₹300 / $10')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcqIy1VKz5M1V" async> </script></form>
+                        <button onclick="orderService('12-Hour Express Pack (Clipping)', '₹300 / $10')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
-                <!-- 6. Channel Launch / "Zero to Hero" Starter Kit -->
+                <!-- 6. Zero to Hero Kit -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         50% OFF
@@ -340,9 +353,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Delivery within 5 days</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Zero to Hero Kit (Clipping)', '₹4,999 / $150')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcrHqdFuviWrU" async> </script></form>
+                        <button onclick="orderService('Zero to Hero Kit (Clipping)', '₹4,999 / $150')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,18 +375,18 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">1</div>
-                    <h4 class="font-bold text-white mb-2 text-base">Choose & Connect</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Select your preferred package and click "Choose Plan" to instantly connect via WhatsApp.</p>
+                    <h4 class="font-bold text-white mb-2 text-base">Pay or Connect</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Pay securely via Razorpay button or click manual WhatsApp order to connect instantly.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">2</div>
                     <h4 class="font-bold text-white mb-2 text-base">Share Video Link</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Send your YouTube video, podcast link, or Google Drive file along with any specific clip instructions.</p>
+                    <p class="text-xs text-gray-400 leading-relaxed">Send your YouTube video, podcast link, or Google Drive file along with any specific instructions.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">3</div>
                     <h4 class="font-bold text-white mb-2 text-base">Confirmation & Start</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Single trial clips start instantly; monthly packages begin after order confirmation & brief discussion.</p>
+                    <p class="text-xs text-gray-400 leading-relaxed">Editing starts instantly after payment confirmation and requirements discussion.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">4</div>
@@ -381,13 +397,13 @@
         </div>
     </section>
 
-    <!-- Meta Ads Services Section -->
+    <!-- SECTION 2: Meta Ads Services -->
     <section id="services" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Professional Solutions</h2>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Scale Your ROI</h2>
                 <h3 class="text-3xl sm:text-5xl font-extrabold mb-4">Meta Ads Setup & Growth Packages</h3>
-                <p class="text-gray-400 text-base">Select the ideal ad plan tailored to your business stage with updated 50% promotional discounts.</p>
+                <p class="text-gray-400 text-base">Select the ideal ad plan tailored to your business stage with updated 50% promotional discounts. Complete setup by professional media buyers.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -411,9 +427,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 7 Days Campaign Monitoring</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Basic Ad Setup', '₹4,499')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Order Now
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcslXGDqfJduT" async> </script></form>
+                        <button onclick="orderService('Basic Ad Setup', '₹4,499')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Plan 2: E-commerce Scaling Campaign -->
@@ -436,9 +455,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 15 Days Optimization & Scaling</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('E-commerce Scaling Campaign', '₹8,999')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold shadow-lg shadow-purple-600/30 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Order Now
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMctaxgSE5Qy4t" async> </script></form>
+                        <button onclick="orderService('E-commerce Scaling Campaign', '₹8,999')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Plan 3: Omnichannel Growth Pro -->
@@ -461,21 +483,24 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 30 Days Dedicated Media Buyer</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Omnichannel Growth Pro', '₹14,999')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-shopping"></i> Order Now
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcv3iOG944XpA" async> </script></form>
+                        <button onclick="orderService('Omnichannel Growth Pro', '₹14,999')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIP Subscriptions Section -->
+    <!-- SECTION 3: VIP Monthly Growth Subscriptions -->
     <section id="subscriptions" class="py-20 bg-[#090315] border-y border-purple-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">VIP Agency Retainers</h2>
                 <h3 class="text-3xl sm:text-5xl font-extrabold mb-4">Monthly Growth Subscriptions</h3>
-                <p class="text-gray-400 text-base">Continuous, hands-on management and optimization with enhanced tier pricing.</p>
+                <p class="text-gray-400 text-base">Continuous, hands-on management and optimization with enhanced tier pricing for long-term brand dominance.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -496,9 +521,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> WhatsApp Support Channel</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Growth Retainer (Monthly)', '₹899/mo')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-bolt"></i> Subscribe Now
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcwG3SiabywUQ" async> </script></form>
+                        <button onclick="orderService('Growth Retainer (Monthly)', '₹899/mo')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Tier 2: Elite Enterprise Partner -->
@@ -521,9 +549,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-indigo-400"></i> Custom Landing Page Conversion Audit</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Elite Enterprise Partner (Monthly)', '₹2,999/mo')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:scale-105 text-white font-bold shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-crown text-yellow-400"></i> Subscribe VIP
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcx8QmQZz3He8" async> </script></form>
+                        <button onclick="orderService('Elite Enterprise Partner (Monthly)', '₹2,999/mo')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Tier 3: Titan Scale Mastermind -->
@@ -543,9 +574,12 @@
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400"></i> 24/7 Priority Emergency WhatsApp Line</li>
                         </ul>
                     </div>
-                    <button onclick="orderService('Titan Scale Mastermind (Monthly)', '₹7,499/mo')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-gem text-pink-400"></i> Join Mastermind
-                    </button>
+                    <div class="space-y-3">
+                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TMcyOKyl9tn0tJ" async> </script></form>
+                        <button onclick="orderService('Titan Scale Mastermind (Monthly)', '₹7,499/mo')" class="w-full py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Manual Order via WhatsApp
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -717,7 +751,6 @@
             menu.classList.toggle('hidden');
         }
 
-        // Close dropdown when clicking outside
         window.addEventListener('click', function(e) {
             const menu = document.getElementById('dropdown-menu');
             const btn = e.target.closest('button');
@@ -778,31 +811,9 @@
                         <p class="text-center text-xs text-gray-400 mt-4">Already have an account? <a href="#" onclick="openModal('login')" class="text-purple-400 underline font-semibold">Login</a></p>
                     </form>
                 `;
-            } else if (type === 'order') {
-                content.innerHTML = `
-                    <h3 class="text-2xl font-bold mb-2 text-white">Confirm Your Order</h3>
-                    <p class="text-sm text-purple-300 mb-6 font-semibold">${extraData.service} — <span class="text-white">${extraData.price}</span></p>
-                    <form onsubmit="submitOrder(event, '${extraData.service}', '${extraData.price}')" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">Your Full Name</label>
-                            <input type="text" id="order-name" required value="Debjit Das" class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">WhatsApp / Phone Number</label>
-                            <input type="text" id="order-phone" required value="7005199436" class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">YouTube / Podcast Link or Instagram URL</label>
-                            <input type="text" id="order-url" required placeholder="https://youtube.com/watch?v=..." class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
-                        </div>
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-check-circle"></i> Complete Order & Book via WhatsApp
-                        </button>
-                    </form>
-                `;
             } else if (type === 'dashboard') {
                 const userOrders = JSON.parse(localStorage.getItem('spike_orders_' + currentUser.email)) || [];
-                let ordersHtml = userOrders.length === 0 ? '<p class="text-sm text-gray-400">No active orders found yet. Select a package to get started!</p>' : 
+                let ordersHtml = userOrders.length === 0 ? '<p class="text-sm text-gray-400">No active manual orders logged yet.</p>' : 
                     userOrders.map(o => `<div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/20 mb-3 flex justify-between items-center"><div><div class="font-bold text-white text-sm">${o.service}</div><div class="text-xs text-purple-300">${o.price} • ${o.date}</div></div><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300">Active</span></div>`).join('');
 
                 content.innerHTML = `
@@ -816,7 +827,7 @@
                         </div>
                     </div>
                     <div class="mb-6">
-                        <h4 class="text-sm font-bold uppercase tracking-wider text-purple-400 mb-3">Your Active Orders & Subscriptions</h4>
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-purple-400 mb-3">Your Tracked Orders</h4>
                         <div class="max-h-60 overflow-y-auto space-y-2">
                             ${ordersHtml}
                         </div>
@@ -874,27 +885,7 @@
         }
 
         function orderService(service, price) {
-            if (!currentUser) {
-                alert("Please login or sign up first to order a service.");
-                openModal('signup');
-                return;
-            }
-            openModal('order', { service, price });
-        }
-
-        function submitOrder(e, service, price) {
-            e.preventDefault();
-            const name = document.getElementById('order-name').value;
-            const phone = document.getElementById('order-phone').value;
-            const url = document.getElementById('order-url').value;
-
-            const order = { service, price, name, phone, url, date: new Date().toLocaleDateString() };
-            let userOrders = JSON.parse(localStorage.getItem('spike_orders_' + currentUser.email)) || [];
-            userOrders.push(order);
-            localStorage.setItem('spike_orders_' + currentUser.email, JSON.stringify(userOrders));
-
-            closeModal();
-            const waText = encodeURIComponent(`Hi SPIKE (Debjit Das), I just ordered *${service}* (${price}). My name is ${name}, Phone: ${phone}, Video/Podcast Link: ${url}`);
+            const waText = encodeURIComponent(`Hi SPIKE (Debjit Das), I want to order *${service}* (${price}). Please guide me with the process.`);
             window.open(`https://wa.me/7005199436?text=${waText}`, '_blank');
         }
 
