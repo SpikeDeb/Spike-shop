@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIKE | Premium Meta Ads & Growth Agency</title>
+    <title>SPIKE | Premium Meta Ads & Video Clipping Agency</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -41,7 +41,7 @@
 
     <!-- Top Announcement Bar -->
     <div class="bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-800 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
-        🔥 <span class="font-bold underline">LIMITED TIME OFFER</span>: Get 50% OFF on all Meta Ads Setup & Growth Plans + Free Strategy Call!
+        🔥 <span class="font-bold underline">LIMITED TIME OFFER</span>: Get 50% OFF on all Video Clipping & Growth Plans + Free Strategy Call!
     </div>
 
     <!-- Navigation Bar -->
@@ -60,6 +60,7 @@
             <!-- Desktop Navigation Links -->
             <div class="hidden md:flex items-center space-x-8 text-sm font-semibold">
                 <a href="#services" class="text-gray-300 hover:text-purple-400 transition">Services</a>
+                <a href="#clipping-packages" class="text-gray-300 hover:text-purple-400 transition">Video Clipping</a>
                 <a href="#subscriptions" class="text-gray-300 hover:text-purple-400 transition">VIP Subscriptions</a>
                 <a href="#custom-deal" class="text-gray-300 hover:text-purple-400 transition">Custom Deal</a>
                 <a href="#about" class="text-gray-300 hover:text-purple-400 transition">About Us</a>
@@ -68,6 +69,10 @@
 
             <!-- Action Buttons / Mobile Menu Trigger -->
             <div class="flex items-center space-x-3">
+                <!-- Instagram Button requested by user -->
+                <a href="https://instagram.com/spike.technologies" target="_blank" title="Instagram: @spike.technologies" class="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-pink-500/30 text-pink-300 hover:text-white hover:bg-pink-600/40 transition text-xs font-bold">
+                    <i class="fa-brands fa-instagram text-base"></i> @spike.technologies
+                </a>
                 <div id="auth-buttons" class="hidden sm:flex items-center space-x-2">
                     <button onclick="openModal('login')" class="text-sm font-semibold px-3 py-2 rounded-xl text-purple-300 hover:text-white hover:bg-purple-900/30 transition">Login</button>
                     <button onclick="openModal('signup')" class="text-sm font-bold px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg">Get Started</button>
@@ -86,16 +91,22 @@
             </div>
         </div>
 
-        <!-- 3-Dot Dropdown Menu (5 Options) -->
+        <!-- 3-Dot Dropdown Menu (Mobile/Quick Options) -->
         <div id="dropdown-menu" class="hidden absolute right-4 top-20 w-64 glass-card rounded-2xl shadow-2xl border border-purple-500/40 p-3 space-y-1 z-50">
+            <a href="https://instagram.com/spike.technologies" target="_blank" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-pink-300 hover:bg-pink-900/40 transition">
+                <i class="fa-brands fa-instagram w-5"></i> @spike.technologies
+            </a>
             <a href="#services" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
-                <i class="fa-solid fa-layer-group text-purple-400 w-5"></i> Services
+                <i class="fa-solid fa-layer-group text-purple-400 w-5"></i> Meta Ad Services
+            </a>
+            <a href="#clipping-packages" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
+                <i class="fa-solid fa-video text-purple-400 w-5"></i> Video Clipping
             </a>
             <a href="#subscriptions" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
-                <i class="fa-solid fa-crown text-yellow-400 w-5"></i> Subscriptions
+                <i class="fa-solid fa-crown text-yellow-400 w-5"></i> VIP Subscriptions
             </a>
             <a href="#custom-deal" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
-                <i class="fa-solid fa-handshake text-emerald-400 w-5"></i> Custom Deal (Refer/Direct)
+                <i class="fa-solid fa-handshake text-emerald-400 w-5"></i> Custom Deal
             </a>
             <a href="#about" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 hover:bg-purple-900/50 hover:text-purple-300 transition">
                 <i class="fa-solid fa-building text-pink-400 w-5"></i> About Us (Founder)
@@ -111,22 +122,22 @@
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/30 via-[#0b041a] to-[#0b041a] pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
             <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-purple-950/80 border border-purple-500/40 text-purple-300 mb-6 shadow-inner">
-                <i class="fa-solid fa-bolt text-yellow-400"></i> Elite Meta Ads Growth Agency by Spike Technologies
+                <i class="fa-solid fa-bolt text-yellow-400"></i> Elite Meta Ads & Video Clipping Agency by Spike Technologies
             </span>
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
                 Scale Your Brand With <br class="hidden sm:inline">
                 <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-pink-500 bg-clip-text text-transparent">
-                    High-Converting Meta Ads
+                    Viral Shorts & Meta Ads
                 </span>
             </h1>
             <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-normal">
-                Engineered by Debjit Das from Dharmanagar. We build bulletproof Facebook & Instagram ad campaigns designed to skyrocket your ROI and flood your store with sales.
+                Engineered by Debjit Das from Dharmanagar. Transform long podcasts into viral 9:16 shorts and launch bulletproof Facebook & Instagram ad campaigns.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 text-white font-bold text-lg shadow-xl shadow-purple-600/40 hover:scale-105 transition text-center">
-                    Explore Ad Services & Plans
+                <a href="#clipping-packages" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 text-white font-bold text-lg shadow-xl shadow-purple-600/40 hover:scale-105 transition text-center">
+                    Explore Video Clipping Packages
                 </a>
-                <a href="https://wa.me/7005199436?text=Hi%20SPIKE,%20I%20want%20to%20grow%20my%20business%20with%20Meta%20Ads!" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 font-bold text-lg hover:bg-emerald-600/30 transition flex items-center justify-center gap-3">
+                <a href="https://wa.me/7005199436?text=Hi%20SPIKE,%20I%20want%20to%20grow%20my%20channel%20with%20Shorts%20Clipping!" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 font-bold text-lg hover:bg-emerald-600/30 transition flex items-center justify-center gap-3">
                     <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i> Chat on WhatsApp
                 </a>
             </div>
@@ -134,16 +145,16 @@
             <!-- Stats Bar -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-purple-900/30 text-left">
                 <div class="p-4 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-purple-400 mb-1">$5M+</div>
-                    <div class="text-xs text-gray-400 font-medium">Ad Spend Managed</div>
+                    <div class="text-3xl font-extrabold text-purple-400 mb-1">5,000+</div>
+                    <div class="text-xs text-gray-400 font-medium">Shorts Edited</div>
                 </div>
                 <div class="p-4 rounded-2xl glass-card">
-                    <div class="text-3xl font-extrabold text-purple-400 mb-1">4.8x</div>
-                    <div class="text-xs text-gray-400 font-medium">Average ROAS</div>
+                    <div class="text-3xl font-extrabold text-purple-400 mb-1">100M+</div>
+                    <div class="text-xs text-gray-400 font-medium">Views Generated</div>
                 </div>
                 <div class="p-4 rounded-2xl glass-card">
                     <div class="text-3xl font-extrabold text-purple-400 mb-1">250+</div>
-                    <div class="text-xs text-gray-400 font-medium">Brands Scaled</div>
+                    <div class="text-xs text-gray-400 font-medium">Podcasters Scaled</div>
                 </div>
                 <div class="p-4 rounded-2xl glass-card">
                     <div class="text-3xl font-extrabold text-purple-400 mb-1">24/7</div>
@@ -153,17 +164,234 @@
         </div>
     </header>
 
-    <!-- Services Section (Prices increased by 50%) -->
+    <!-- NEW SECTION: Video Clipping & Repurposing Packages (With 50% Strikethrough & INR/USD) -->
+    <section id="clipping-packages" class="py-20 relative bg-[#090315] border-y border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Long-to-Short Conversion</h2>
+                <h3 class="text-3xl sm:text-5xl font-extrabold mb-4">Podcast & Video Clipping Services</h3>
+                <p class="text-gray-400 text-base">Turn your long-form streams and podcasts into viral 9:16 Shorts, Reels, and TikToks. Special 50% OFF discount rates below!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1. Starter / Trial Package -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20 hover:border-purple-500/50 transition">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        50% OFF
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">Starter / Trial Package</div>
+                        <p class="text-gray-400 text-sm mb-6">Ideal for small creators testing out high-retention clipping.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹999 / $30</span>
+                                <span class="text-sm text-gray-500 line-through">₹1,999 / $60</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">Or ₹150 / $6 per Single Short</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 4 Shorts / Reels per month (1/wk)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Standard 9:16 Vertical Format</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Basic Clean Subtitles / Captions</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Simple Hook (First 3s engaging open)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Revision per video</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('Starter / Trial Package (Clipping)', '₹999 / $30')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+
+                <!-- 2. Growth Package (Best Seller) -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border-2 border-purple-500 shadow-2xl shadow-purple-600/20 scale-105 z-10">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        BEST SELLER 🚀
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">Growth Package</div>
+                        <p class="text-gray-400 text-sm mb-6">Designed for podcasters wanting steady weekly viral reach.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹2,999 / $90</span>
+                                <span class="text-sm text-gray-500 line-through">₹5,999 / $180</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">Monthly Subscription</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 12 Shorts / Reels per month (3/wk)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Trending Dynamic Captions (Hormozi style)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Catchy Emojis & Sound Effects (SFX)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Strong Visual Hooks & Color Correction</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Fast Delivery (24-48 hours)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Unlimited Revisions</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('Growth Package (Clipping)', '₹2,999 / $90')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold shadow-lg shadow-purple-600/30 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+
+                <!-- 3. Pro / Agency Package -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20 hover:border-purple-500/50 transition">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        50% OFF
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">Pro / Agency Package</div>
+                        <p class="text-gray-400 text-sm mb-6">For top podcasters wanting daily shorts domination.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹5,999 / $170</span>
+                                <span class="text-sm text-gray-500 line-through">₹11,999 / $340</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">Monthly Subscription (Daily 1 Short)</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 30 Shorts / Reels per month</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Premium Dynamic Captions, Emojis & SFX</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Dedicated Thumbnail / Cover Image per short</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Priority Support & Fast Delivery</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Full channel growth optimization tips</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('Pro / Agency Package (Clipping)', '₹5,999 / $170')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Additional Clipping Packs Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <!-- 4. Bulk / Volume Pack -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        50% OFF
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">Bulk / Volume Pack</div>
+                        <p class="text-gray-400 text-sm mb-6">10 shorts bundle valid for a full month.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹1,200 / $36</span>
+                                <span class="text-sm text-gray-500 line-through">₹2,400 / $72</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">10 Shorts Bundle</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 10 Shorts / Reels bundle</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Dynamic Captions & Basic Emojis</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Standard 9:16 Vertical Format</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Delivery: 3 to 4 days</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Free Revision per video</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('Bulk / Volume Pack (Clipping)', '₹1,200 / $36')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+
+                <!-- 5. Emergency / 12-Hour Express Delivery -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        50% OFF
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">12-Hour Express Pack</div>
+                        <p class="text-gray-400 text-sm mb-6">Urgent same-day delivery for breaking viral trends.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹300 / $10</span>
+                                <span class="text-sm text-gray-500 line-through">₹600 / $20</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">Per Short (Urgent Delivery)</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Single Short/Reel within 12 Hours</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Full Dynamic Captions, Emojis & SFX</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Priority Editing Queue</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 1 Free Revision</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('12-Hour Express Pack (Clipping)', '₹300 / $10')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+
+                <!-- 6. Channel Launch / "Zero to Hero" Starter Kit -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        50% OFF
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-purple-300 mb-2">Zero to Hero Kit</div>
+                        <p class="text-gray-400 text-sm mb-6">All-in-one launch kit for new podcasters & channels.</p>
+                        <div class="mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-black text-white">₹4,999 / $150</span>
+                                <span class="text-sm text-gray-500 line-through">₹9,999 / $300</span>
+                            </div>
+                            <div class="text-xs text-purple-400 mt-1 font-semibold">One-Time Launch Package</div>
+                        </div>
+                        <ul class="space-y-3.5 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 15 High-Impact Shorts from 3 long videos</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Premium Captions, Custom Emojis & SFX</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> 3 Custom Clickable Thumbnails</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Channel Optimization Checklist</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Delivery within 5 days</li>
+                        </ul>
+                    </div>
+                    <button onclick="orderService('Zero to Hero Kit (Clipping)', '₹4,999 / $150')" class="w-full py-3.5 rounded-xl bg-purple-900/50 hover:bg-purple-800 text-purple-200 font-bold border border-purple-500/40 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Choose Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEAL KAISE HOGI? (HOW IT WORKS SECTION) -->
+    <section class="py-16 bg-[#0b041a] border-b border-purple-900/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Simple Process</h2>
+                <h3 class="text-3xl font-extrabold mb-3">🤝 Deal Kaise Hogi? (How It Works)</h3>
+                <p class="text-gray-400 text-sm">Transparent, fast, and direct collaboration through WhatsApp.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">1</div>
+                    <h4 class="font-bold text-white mb-2 text-base">Choose & Connect</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Select your preferred package and click "Choose Plan" to instantly connect via WhatsApp.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">2</div>
+                    <h4 class="font-bold text-white mb-2 text-base">Share Video Link</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Send your YouTube video, podcast link, or Google Drive file along with any specific clip instructions.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">3</div>
+                    <h4 class="font-bold text-white mb-2 text-base">Confirmation & Start</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Single trial clips start instantly; monthly packages begin after order confirmation & brief discussion.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border border-purple-500/20 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/30 text-purple-300 font-bold text-lg flex items-center justify-center mx-auto mb-4">4</div>
+                    <h4 class="font-bold text-white mb-2 text-base">Delivery & Revision</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Receive your ready-to-upload viral shorts within 24-48 hours. Free revisions included!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Ads Services Section -->
     <section id="services" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Professional Solutions</h2>
                 <h3 class="text-3xl sm:text-5xl font-extrabold mb-4">Meta Ads Setup & Growth Packages</h3>
-                <p class="text-gray-400 text-base">Select the ideal plan tailored to your business stage with updated 50% promotional discounts.</p>
+                <p class="text-gray-400 text-base">Select the ideal ad plan tailored to your business stage with updated 50% promotional discounts.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Plan 1: Basic Ad Setup (₹6,000 -> ₹9,000 orig, 50% off = ₹4,499) -->
+                <!-- Plan 1: Basic Ad Setup -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20 hover:border-purple-500/50 transition group">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         50% OFF
@@ -188,7 +416,7 @@
                     </button>
                 </div>
 
-                <!-- Plan 2: E-commerce Scaling Campaign (₹11,998 -> ₹17,997 orig, 50% off = ₹8,999) -->
+                <!-- Plan 2: E-commerce Scaling Campaign -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border-2 border-purple-500 shadow-2xl shadow-purple-600/20 scale-105 z-10">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         MOST POPULAR
@@ -213,7 +441,7 @@
                     </button>
                 </div>
 
-                <!-- Plan 3: Omnichannel Growth Pro (₹19,998 -> ₹29,997 orig, 50% off = ₹14,999) -->
+                <!-- Plan 3: Omnichannel Growth Pro -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border border-purple-500/20 hover:border-purple-500/50 transition group">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         50% OFF
@@ -241,7 +469,7 @@
         </div>
     </section>
 
-    <!-- VIP Subscriptions Section (Prices increased by 50%) -->
+    <!-- VIP Subscriptions Section -->
     <section id="subscriptions" class="py-20 bg-[#090315] border-y border-purple-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -251,7 +479,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tier 1: Growth Retainer (₹599 -> ₹899, orig ₹1,799) -->
+                <!-- Tier 1: Growth Retainer -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-purple-500/20 hover:border-purple-500/50 transition">
                     <div>
                         <div class="inline-block px-3 py-1 rounded-lg bg-purple-950 text-purple-300 text-xs font-bold mb-4">MONTHLY PASS</div>
@@ -273,7 +501,7 @@
                     </button>
                 </div>
 
-                <!-- Tier 2: Elite Enterprise Partner (₹1,999 -> ₹2,999, orig ₹5,999) -->
+                <!-- Tier 2: Elite Enterprise Partner -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border-2 border-indigo-500/60 bg-gradient-to-b from-purple-950/40 to-[#0f0728] shadow-2xl relative">
                     <div class="absolute -top-4 right-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         VIP PREFERRED
@@ -298,7 +526,7 @@
                     </button>
                 </div>
 
-                <!-- Tier 3: Titan Scale Mastermind (₹4,999 -> ₹7,499, orig ₹14,998) -->
+                <!-- Tier 3: Titan Scale Mastermind -->
                 <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-purple-500/20 hover:border-purple-500/50 transition">
                     <div>
                         <div class="inline-block px-3 py-1 rounded-lg bg-pink-950 text-pink-300 text-xs font-bold mb-4">ULTIMATE MASTERMIND</div>
@@ -365,7 +593,7 @@
         </div>
     </section>
 
-    <!-- About Us Section (Founder Debjit Das, Spike Technologies, Dharmanagar, Tripura) -->
+    <!-- About Us Section -->
     <section id="about" class="py-20 bg-[#090315] border-y border-purple-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -373,10 +601,10 @@
                     <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">About Spike Technologies</h2>
                     <h3 class="text-3xl sm:text-5xl font-extrabold mb-6">Meet The Visionary Founder</h3>
                     <p class="text-gray-300 mb-6 leading-relaxed text-base">
-                        Welcome to <strong class="text-purple-300">Spike Technologies</strong>—a premier, cutting-edge digital growth and performance marketing agency founded by <strong class="text-white underline decoration-purple-500">Debjit Das</strong>. Hailing from the vibrant town of <span class="text-purple-300 font-semibold">Dharmanagar, North East Tripura</span>, Debjit has built a powerhouse brand dedicated to revolutionizing how businesses scale online through data-driven Meta advertising systems.
+                        Welcome to <strong class="text-purple-300">Spike Technologies</strong>—a premier, cutting-edge digital growth, video clipping, and performance marketing agency founded by <strong class="text-white underline decoration-purple-500">Debjit Das</strong>. Hailing from the vibrant town of <span class="text-purple-300 font-semibold">Dharmanagar, North East Tripura</span>, Debjit has built a powerhouse brand dedicated to revolutionizing how creators and businesses scale online through viral shorts and data-driven advertising systems.
                     </p>
                     <p class="text-gray-400 mb-8 leading-relaxed text-sm">
-                        With unmatched expertise in media buying, conversion rate optimization, and aggressive scaling frameworks, Spike Technologies has empowered numerous brands across international and domestic markets to shatter revenue ceilings. Under Debjit's visionary leadership, the agency stands as a beacon of trust, technical excellence, and relentless dedication to client success.
+                        With unmatched expertise in short-form video repurposing, media buying, and conversion rate optimization, Spike Technologies has empowered numerous brands across international and domestic markets to shatter revenue and view ceilings. Under Debjit's visionary leadership, the agency stands as a beacon of trust, technical excellence, and relentless dedication to client success.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-4 rounded-2xl glass-card">
@@ -397,14 +625,14 @@
                     <h4 class="text-2xl font-extrabold text-white mb-2">Debjit Das</h4>
                     <div class="text-purple-400 font-bold text-sm mb-6">Founder & CEO — Spike Technologies</div>
                     <blockquote class="text-gray-300 text-sm italic mb-8 border-l-4 border-purple-500 pl-4">
-                        "Our mission at SPIKE is to bridge world-class marketing strategies with emerging brands, turning every rupee of ad spend into predictable, explosive revenue growth."
+                        "Our mission at SPIKE is to bridge world-class short-form editing and marketing strategies with creators worldwide, turning every video into viral reach and explosive revenue growth."
                     </blockquote>
                     <div class="flex items-center gap-4 pt-6 border-t border-purple-900/40">
                         <a href="https://wa.me/7005199436" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 font-bold text-sm hover:bg-emerald-600/30 transition flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp"></i> Direct Connect
                         </a>
-                        <a href="mailto:spiketechsupport@gmail.com" class="px-5 py-2.5 rounded-xl bg-purple-900/40 border border-purple-500/30 text-purple-200 font-bold text-sm hover:bg-purple-900/60 transition flex items-center gap-2">
-                            <i class="fa-solid fa-envelope"></i> Email Founder
+                        <a href="https://instagram.com/spike.technologies" target="_blank" class="px-5 py-2.5 rounded-xl bg-pink-600/20 border border-pink-500/40 text-pink-300 font-bold text-sm hover:bg-pink-600/30 transition flex items-center gap-2">
+                            <i class="fa-brands fa-instagram"></i> Instagram
                         </a>
                     </div>
                 </div>
@@ -434,7 +662,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2">Message or Service Requirement</label>
-                        <textarea id="contact-msg" rows="4" required placeholder="Tell us about your brand and what goals you want to achieve with Meta Ads..." class="w-full px-4 py-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 focus:border-purple-400 focus:outline-none text-white text-sm"></textarea>
+                        <textarea id="contact-msg" rows="4" required placeholder="Tell us about your podcast, channel, or ad goals..." class="w-full px-4 py-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 focus:border-purple-400 focus:outline-none text-white text-sm"></textarea>
                     </div>
                     <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold shadow-lg shadow-purple-600/30 transition">
                         Send Message to SPIKE Team
@@ -454,9 +682,10 @@
                 <span class="text-lg font-bold text-white tracking-wider">SPIKE Technologies</span>
             </div>
             <div>
-                © 2026 SPIKE Agency (Founder: Debjit Das, Dharmanagar, Tripura). All rights reserved. Support: <a href="mailto:spiketechsupport@gmail.com" class="text-purple-400 underline">spiketechsupport@gmail.com</a> | WhatsApp: <a href="https://wa.me/7005199436" class="text-purple-400 underline">+91 7005199436</a>
+                © 2026 SPIKE Agency (Founder: Debjit Das, Dharmanagar, Tripura). Instagram: <a href="https://instagram.com/spike.technologies" target="_blank" class="text-pink-400 underline">@spike.technologies</a> | WhatsApp: <a href="https://wa.me/7005199436" class="text-purple-400 underline">+91 7005199436</a>
             </div>
             <div class="flex space-x-4 text-lg">
+                <a href="https://instagram.com/spike.technologies" target="_blank" class="text-gray-400 hover:text-pink-400 transition"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://wa.me/7005199436" target="_blank" class="text-gray-400 hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="mailto:spiketechsupport@gmail.com" class="text-gray-400 hover:text-purple-400 transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
@@ -563,17 +792,17 @@
                             <input type="text" id="order-phone" required value="7005199436" class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">Business Website or Page URL</label>
-                            <input type="text" id="order-url" required placeholder="https://instagram.com/yourbrand" class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
+                            <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">YouTube / Podcast Link or Instagram URL</label>
+                            <input type="text" id="order-url" required placeholder="https://youtube.com/watch?v=..." class="w-full px-4 py-3 rounded-xl bg-purple-950/60 border border-purple-500/30 text-white text-sm">
                         </div>
                         <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-check-circle"></i> Complete Order & Pay via WhatsApp
+                            <i class="fa-solid fa-check-circle"></i> Complete Order & Book via WhatsApp
                         </button>
                     </form>
                 `;
             } else if (type === 'dashboard') {
                 const userOrders = JSON.parse(localStorage.getItem('spike_orders_' + currentUser.email)) || [];
-                let ordersHtml = userOrders.length === 0 ? '<p class="text-sm text-gray-400">No active orders found yet. Select a service to get started!</p>' : 
+                let ordersHtml = userOrders.length === 0 ? '<p class="text-sm text-gray-400">No active orders found yet. Select a package to get started!</p>' : 
                     userOrders.map(o => `<div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/20 mb-3 flex justify-between items-center"><div><div class="font-bold text-white text-sm">${o.service}</div><div class="text-xs text-purple-300">${o.price} • ${o.date}</div></div><span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300">Active</span></div>`).join('');
 
                 content.innerHTML = `
@@ -595,7 +824,7 @@
                     <div class="p-4 rounded-xl bg-purple-900/20 border border-purple-500/30 flex items-center justify-between">
                         <div>
                             <div class="text-xs font-bold text-white">Founder Support (Dharmanagar)</div>
-                            <div class="text-xs text-gray-400">WhatsApp: 7005199436</div>
+                            <div class="text-xs text-gray-400">Instagram: @spike.technologies</div>
                         </div>
                         <a href="https://wa.me/7005199436?text=Hi%20SPIKE%20support,%20my%20email%20is%20${currentUser.email}" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold shadow">
                             <i class="fa-brands fa-whatsapp"></i> Chat
@@ -665,7 +894,7 @@
             localStorage.setItem('spike_orders_' + currentUser.email, JSON.stringify(userOrders));
 
             closeModal();
-            const waText = encodeURIComponent(`Hi SPIKE (Debjit Das), I just placed an order for *${service}* (${price}). My name is ${name}, Phone: ${phone}, URL: ${url}`);
+            const waText = encodeURIComponent(`Hi SPIKE (Debjit Das), I just ordered *${service}* (${price}). My name is ${name}, Phone: ${phone}, Video/Podcast Link: ${url}`);
             window.open(`https://wa.me/7005199436?text=${waText}`, '_blank');
         }
 
